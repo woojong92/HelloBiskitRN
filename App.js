@@ -25,7 +25,7 @@ function CustomDrawerContent(props) {
 }
 
 function App () {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     isLoggedIn ? (
@@ -47,8 +47,8 @@ function App () {
       </Drawer.Navigator>
     </NavigationContainer>
     ) : (
-      // <LoginScreen />
-      <View><Text>로그인</Text></View>
+      <LoginScreen />
+
     )
 
   )

@@ -20,8 +20,36 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb2676399245959992</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.506219587507-8fssle4m1oss3lv430557p96ovj79le7</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>2676399245959992</string>
+	<key>FacebookDisplayName</key>
+	<string>moonbucks</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -72,28 +100,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-
-	<key>CFBundleURLTypes</key>
-<array>
-  <dict>
-  <key>CFBundleURLSchemes</key>
-  <array>
-    <string>fb2676399245959992</string>
-  </array>
-  </dict>
-</array>
-<key>FacebookAppID</key>
-<string>2676399245959992</string>
-<key>FacebookDisplayName</key>
-<string>moonbucks</string>
-
-<key>LSApplicationQueriesSchemes</key>
-<array>
-  <string>fbapi</string>
-  <string>fb-messenger-api</string>
-  <string>fbauth2</string>
-  <string>fbshareextension</string>
-</array>
-
 </dict>
 </plist>

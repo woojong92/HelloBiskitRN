@@ -1,8 +1,24 @@
 import React, {useEffect} from 'react';
-import { SafeAreaView, View, Button, StyleSheet, Platform, Alert } from 'react-native';
+import { 
+  SafeAreaView, 
+  Button, 
+  StyleSheet, 
+  NativeModules,
+  Alert,
+  NativeEventEmitter
+} from 'react-native';
 import FBLoginButton from '../components/FBLoginButton';
 
 import { GoogleSignin, GoogleSigninButton } from '@react-native-community/google-signin';
+
+
+const { Console: RNConsole }  = NativeModules;
+const emitter = new NativeEventEmitter(RNConsole);
+
+const subscription = emitter.addListener(
+  'my_event',
+  (evt) => console.log(evt)
+)
 
 export default function LoginScreen() {
 
@@ -50,7 +66,36 @@ export default function LoginScreen() {
                 onPress={async() =>await signIn()}
                 // disabled={this.state.isSigninInProgress} 
             />
+            <Button 
+              title="RNConsole"
+              style={{
+                width: 200,
+                height: 20
+              }}
+              onPress={async () => {
+                try{
+                  const result = await RNConsole.writeTextWithPromise('Hello Native');
+                  Alert.alert('result', result)
+                }catch(error){
+                  Alert.alert(error)
+                }
+              }}
+            />
 
+            <Button 
+              title="TimerEmitter"
+              style={{
+                width: 200,
+                height: 20
+              }}
+              onPress={async () => {
+                RNConsole.runTimer();
+                // const subscription = emitter.addListener(
+                //   'my_event',
+                //   (evt) => console.log(evt)
+                // )
+              }}
+            />
             </SafeAreaView>
     )
 } 

@@ -19,6 +19,7 @@
 		4CDAFCA99D44DA5EA3D49603 /* libPods-HelloBiskitRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DBF94BA6B50F94492D02F4 /* libPods-HelloBiskitRN.a */; };
 		553919F5494416D1E82D8AE1 /* libPods-HelloBiskitRN-HelloBiskitRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62229923E4841C2FF65B371A /* libPods-HelloBiskitRN-HelloBiskitRNTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		EFB2FDD624E6302A00B3154C /* Console.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB2FDD524E6302A00B3154C /* Console.m */; };
 		EFE10FAB8966FA1B65EE3003 /* libPods-HelloBiskitRN-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A7128F8896659588DBFFEE /* libPods-HelloBiskitRN-tvOSTests.a */; };
 		EFF9D39A24E5012D00D562CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFF9D39924E5012D00D562CC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,8 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EEE9C6FCC66DF32AFA3B6E1C /* Pods-HelloBiskitRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloBiskitRN.debug.xcconfig"; path = "Target Support Files/Pods-HelloBiskitRN/Pods-HelloBiskitRN.debug.xcconfig"; sourceTree = "<group>"; };
+		EFB2FDD424E6302A00B3154C /* Console.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = "<group>"; };
+		EFB2FDD524E6302A00B3154C /* Console.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Console.m; sourceTree = "<group>"; };
 		EFE73D4E24E3D9D600AAB034 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		EFE73D4F24E3D9D600AAB034 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
 		EFE73D5024E3D9D600AAB034 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				EFB2FDD424E6302A00B3154C /* Console.h */,
+				EFB2FDD524E6302A00B3154C /* Console.m */,
 			);
 			name = HelloBiskitRN;
 			sourceTree = "<group>";
@@ -684,6 +689,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				EFB2FDD624E6302A00B3154C /* Console.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

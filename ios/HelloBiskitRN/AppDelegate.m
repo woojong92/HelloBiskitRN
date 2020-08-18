@@ -13,6 +13,8 @@
 #import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
+
 @import Firebase;
 
 static void InitializeFlipper(UIApplication *application) {
@@ -30,6 +32,7 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
   [FBSDKAppEvents activateApp];
+  [KOSession handleDidBecomeActive];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -62,10 +65,28 @@ static void InitializeFlipper(UIApplication *application) {
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
-  return [[FBSDKApplicationDelegate sharedInstance] application:application
+  
+    if ([KOSession isKakaoAccountLoginCallback:url]) {
+        return [KOSession handleOpenURL:url];
+    }
+
+
+  
+    if ([[FBSDKApplicationDelegate sharedInstance] application:application
                                                          openURL:url
                                                sourceApplication:sourceApplication
-                                                      annotation:annotation];
+                                                    annotation:annotation]) return true;
+  
+      return false;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+                                                options:(NSDictionary<NSString *,id> *)options {
+    if ([KOSession isKakaoAccountLoginCallback:url]) {
+        return [KOSession handleOpenURL:url];
+    }
+
+    return false;
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge

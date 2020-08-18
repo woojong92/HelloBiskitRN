@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">HelloBiskitRN</string>
     <string name="facebook_app_id">2676399245959992</string>
+    <string name="kakao_app_key">942714cd6ffc8fd61fdd9f14ca226544</string>
 </resources>

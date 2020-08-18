@@ -74,10 +74,10 @@ export default function LoginScreen() {
               }}
               onPress={async () => {
                 try{
-                  const result = await RNConsole.writeTextWithPromise('Hello Native');
+                  const result = await RNConsole.writeTextWithPromise('Error');
                   Alert.alert('result', result)
                 }catch(error){
-                  Alert.alert(error)
+                  Alert.alert(`${error}`)
                 }
               }}
             />

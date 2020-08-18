@@ -10,6 +10,7 @@ import { NavigationContainer, DrawerActions } from '@react-navigation/native';
 
 import RootStack from './src/screen/RootStack';
 import LoginScreen from './src/screen/LoginScreen';
+import KakaoLogin from './src/screen/KakaoLogin';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -28,6 +29,7 @@ function App () {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
+
     isLoggedIn ? (
       <NavigationContainer>
       <Drawer.Navigator 
@@ -54,4 +56,5 @@ function App () {
   )
 }
 
-export default App;
+export default KakaoLogin;
+// export default App;

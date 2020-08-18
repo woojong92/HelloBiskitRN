@@ -36,6 +36,14 @@
 				<string>com.googleusercontent.apps.506219587507-8fssle4m1oss3lv430557p96ovj79le7</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakao942714cd6ffc8fd61fdd9f14ca226544</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
@@ -43,6 +51,8 @@
 	<string>2676399245959992</string>
 	<key>FacebookDisplayName</key>
 	<string>moonbucks</string>
+	<key>KAKAO_APP_KEY</key>
+	<string>942714cd6ffc8fd61fdd9f14ca226544</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

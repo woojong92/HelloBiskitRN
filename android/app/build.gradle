@@ -195,6 +195,8 @@ dependencies {
 
     implementation(project(":react-native-google-signin"))
 
+    implementation project(':react-native-seoul-naver-login')
+
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
     }

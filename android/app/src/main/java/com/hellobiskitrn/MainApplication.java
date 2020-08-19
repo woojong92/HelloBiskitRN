@@ -13,6 +13,7 @@ import java.util.List;
 
 import androidx.multidex.MultiDexApplication;
 import co.apptailor.googlesignin.RNGoogleSigninPackage;
+import com.dooboolab.naverlogin.RNNaverLoginPackage;
 
 public class MainApplication extends MultiDexApplication implements ReactApplication {
 

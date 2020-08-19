@@ -14,6 +14,7 @@
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <KakaoOpenSDK/KakaoOpenSDK.h>
+#import <NaverThirdPartyLogin/NaverThirdPartyLoginConnection.h>
 
 @import Firebase;
 
@@ -57,6 +58,8 @@ static void InitializeFlipper(UIApplication *application) {
   [[FBSDKApplicationDelegate sharedInstance] application:application
                            didFinishLaunchingWithOptions:launchOptions];
   [FIRApp configure];
+  [[NaverThirdPartyLoginConnection getSharedInstance] setIsNaverAppOauthEnable:YES];
+  [[NaverThirdPartyLoginConnection getSharedInstance] setIsInAppOauthEnable:YES];
   
   return YES;
 }
@@ -77,13 +80,17 @@ static void InitializeFlipper(UIApplication *application) {
                                                sourceApplication:sourceApplication
                                                     annotation:annotation]) return true;
   
-      return false;
+    return false;
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
                                                 options:(NSDictionary<NSString *,id> *)options {
     if ([KOSession isKakaoAccountLoginCallback:url]) {
         return [KOSession handleOpenURL:url];
+    }
+  
+    if ([url.scheme isEqualToString:@"your_apps_urlscheme"]) {
+      return [[NaverThirdPartyLoginConnection getSharedInstance] application:application openURL:url options:options];
     }
 
     return false;
